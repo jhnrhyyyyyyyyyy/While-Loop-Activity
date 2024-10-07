@@ -1,22 +1,16 @@
 let secretNum = 7;
+let guessNum;
 
-let guess = 0;
-while (guess < 10){
+while (guessNum !== secretNum){
     let guessNum = parseInt(prompt("Guess a number between 1 and 10:"));
 
-    if (secretNum === guessNum){
-        console.log("You guess the correct number!");
-        break;
-    } else if (secretNum < guessNum){
+    if (guessNum > secretNum){
         console.log("Too high!");
-        guess++;
+    } else if(guessNum < secretNum){
+        console.log("Too low!");
     } else{
-        console.log("Too low");
-        guess++;
-    }
-    if (guess === 10){
-        console.log("Attemp reach the limit");
-    }
-
+        console.log("Correct!");
+        break;
+    }    
 }
 
